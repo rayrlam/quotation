@@ -1,5 +1,4 @@
 <?php
-
 namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
@@ -10,6 +9,6 @@ class QuoteController extends Controller
 {
     public function quoting(Request $request)
     {   
-        return ["Quoting Result"=>QuoteHelper::getQuote($request)];  
+        return ["data" => ["result" => QuoteHelper::getQuote($request)]];  
     }
 }
