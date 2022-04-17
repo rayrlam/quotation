@@ -1,5 +1,4 @@
 <?php
-
 namespace Tests\Unit;
 
 use Illuminate\Http\Response;
@@ -10,12 +9,7 @@ use App\Helpers\QuoteHelper;
 class QuoteTest extends TestCase
 {
     use RefreshDatabase;
-
-    /**
-     * A basic unit test example.
-     *
-     * @return void
-     */
+ 
     public function test_rating_factor_equal_627()
     {
         $this->seed();
