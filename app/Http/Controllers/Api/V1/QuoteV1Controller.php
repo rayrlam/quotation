@@ -1,11 +1,11 @@
 <?php
-namespace App\Http\Controllers\Api;
+namespace App\Http\Controllers\Api\V1;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Helpers\QuoteHelper;
 
-class QuoteController extends Controller
+class QuoteV1Controller extends Controller
 {
     public function quoting(Request $request)
     {   

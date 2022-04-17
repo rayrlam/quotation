@@ -1,7 +1,8 @@
 <?php
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\Api\QuoteController;
+use App\Http\Controllers\Api\V1\QuoteV1Controller;
+use App\Http\Controllers\Api\V2\QuoteV2Controller;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,5 +20,9 @@ use App\Http\Controllers\Api\QuoteController;
 // });
 
 Route::group(['prefix'=>'v1'], function(){
-    Route::post('/quoting', [QuoteController::class, 'quoting'])->name('quoting');
+    Route::post('/quoting', [QuoteV1Controller::class, 'quoting'])->name('quoting');
+});
+
+Route::group(['prefix'=>'v2'], function(){
+    Route::post('/quoting', [QuoteV2Controller::class, 'quoting'])->name('quoting');
 });

@@ -90,18 +90,21 @@
                     Main File
                     <ul>
                         <li>
-                            Controller: App\Http\Controllers\Api\QuoteController
+                            Controller: App\Http\Controllers\Api\V1\QuoteV1Controller, App\Http\Controllers\Api\V2\QuoteV2Controller
                         </li>
                         <li>
-                            Helper: App\Helpers\QuoteHelper
+                            Helpers: App\Helpers\QuoteHelper
                         </li>
                         <li>
-                            Test: Tests\Unit\QuoteTest
+                            Tests: Tests\Unit\QuoteTest
+                        </li>
+                        <li>
+                            Services: QuoteInterface, AgeRf, AbicodeRf, PostcodeRf
                         </li>
                     </ul>
                 </li>
                 <li>
-                    Api Route: '/api/v1/quoting'
+                    Api Route: '/api/v1/quoting', '/api/v1/quoting'
                 </li>
             </ul>  
         </div>
