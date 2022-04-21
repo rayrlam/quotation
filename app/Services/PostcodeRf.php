@@ -3,7 +3,8 @@ namespace App\Services;
 use App\Services\QuoteInterface;
 use App\Models\Postcode;
 
-class PostcodeRf implements QuoteInterface{
+class PostcodeRf implements QuoteInterface
+{
     private $rf = 1.0;
 
     public function __construct(string $string)

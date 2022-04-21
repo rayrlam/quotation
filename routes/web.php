@@ -1,5 +1,7 @@
 <?php
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Api\V3\Cart;
+use App\Http\Controllers\Api\V3\QuoteV3Controller;
 
 /*
 |--------------------------------------------------------------------------

@@ -4,7 +4,8 @@ use App\Services\QuoteInterface;
 use App\Helpers\QuoteHelper;
 use App\Models\Abicode;
 
-class AbicodeRf implements QuoteInterface{
+class AbicodeRf implements QuoteInterface
+{
     private $rf = 1.0;
 
     public function __construct(string $string)
