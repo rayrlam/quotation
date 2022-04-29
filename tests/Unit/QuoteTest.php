@@ -42,7 +42,15 @@ class QuoteTest extends TestCase
               "data" => [
                   "result" => 627
               ]
-          ]);    
+          ]);
+        
+        $this->postJson('api/v4/quoting', $payload)
+          ->assertStatus(200)
+          ->assertJson([
+             "data" => [
+                 "result" => 627
+             ]
+         ]);    
     }
 
     public function test_random_age_postcode_abicode()
@@ -104,5 +112,13 @@ class QuoteTest extends TestCase
                   "result" => $sum
               ]
           ]);
+
+        $this->postJson('api/v4/quoting', $payload)
+          ->assertStatus(200)
+          ->assertJson([
+             "data" => [
+                 "result" => $sum
+             ]
+         ]);
     }
 }
