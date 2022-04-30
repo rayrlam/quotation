@@ -47,7 +47,7 @@ class QuoteHelper
         $rf_postcode = self::getRf('postcode', $request->postcode);
         $rf_abicode = self::getRf('abicode', $request->regNo);
 
-        return self::BASE_PREMIUM * $rf_age * $rf_postcode * $rf_abicode;
+        return round(self::BASE_PREMIUM * $rf_age * $rf_postcode * $rf_abicode,2);
     }
 
     static public function getFakeAbicode(string $regNo): int 

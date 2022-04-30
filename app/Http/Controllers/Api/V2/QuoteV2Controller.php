@@ -26,6 +26,6 @@ class QuoteV2Controller extends Controller
             $sum *= (new $class($v['val']))->getRatingFactor();
         }
         
-        return ["data" => ["result" => $sum]];  
+        return ["data" => ["result" => round($sum,2)]];  
     }
 }

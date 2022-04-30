@@ -24,7 +24,7 @@ class QuoteTest extends TestCase
              ->assertStatus(200)
              ->assertJson([
                 "data" => [
-                    "result" => 627
+                    "result" => 627.00
                 ]
             ]);
         
@@ -40,7 +40,7 @@ class QuoteTest extends TestCase
            ->assertStatus(200)
            ->assertJson([
               "data" => [
-                  "result" => 627
+                  "result" => 627.00
               ]
           ]);
         
@@ -48,7 +48,7 @@ class QuoteTest extends TestCase
           ->assertStatus(200)
           ->assertJson([
              "data" => [
-                 "result" => 627
+                 "result" => 627.00
              ]
          ]);    
     }
@@ -88,6 +88,8 @@ class QuoteTest extends TestCase
         for($i=0; $i<3;$i++){
             $sum *= $a[$i]['rating_factor'];
         }
+        
+        $sum = round($sum,2);
 
         $this->postJson('api/v1/quoting', $payload)
              ->assertStatus(200)

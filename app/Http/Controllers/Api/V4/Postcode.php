@@ -1,14 +1,15 @@
 <?php
 namespace App\Http\Controllers\Api\V4;
 
+use App\Http\Controllers\Api\V4\RatingInterface;
 use App\Http\Controllers\Api\V4\RatingFactorHandler;
 
-class Postcode extends RatingFactorHandler implements Rating
+class Postcode extends RatingFactorHandler implements RatingInterface
 {
     private $rating;
     private $postcode;
  
-    public function __construct (Rating $rating, string $postcode) {
+    public function __construct (RatingInterface $rating, string $postcode) {
         $this->postcode = $postcode;
         $this->rating = $rating;
     }

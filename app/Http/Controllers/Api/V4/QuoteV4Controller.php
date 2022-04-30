@@ -15,6 +15,7 @@ class QuoteV4Controller extends Controller
         $item = new Abicode($request->regNo);
         $item = new Postcode($item, $request->postcode);
         $item = new Age($item, $request->age);
-        return ["data" => ["result" => $item->cost()]];
+        $result = round($item->cost(), 2);
+        return ["data" => ["result" => $result]];
     }
 }
