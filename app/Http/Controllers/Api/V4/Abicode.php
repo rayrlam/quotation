@@ -16,6 +16,6 @@ class Abicode extends RatingFactorHandler implements RatingInterface
 
     public function cost() {
         $value = QuoteHelper::getFakeAbicode($this->regNo);
-        return QuoteHelper::BASE_PREMIUM * RatingFactorHandler::getRatingFactor('regno', $value);
+        return RatingFactorHandler::getRatingFactor('regno', $value);
     }
 }
