@@ -54,16 +54,13 @@
         </style>
     </head>
     <body class="antialiased">
-        <div class="relative flex items-top justify-center  bg-gray-100 dark:bg-gray-900 sm:items-center py-4 sm:pt-0">
+        <div class="w-full  flex items-top justify-center  bg-gray-100 dark:bg-gray-900 sm:items-center">
         
-            <div class="max-w-6xl  px-6">
-
-          
-
+            <div class="sm:px-6">
                 @if (Route::has('login'))
                     <div class="">
 
-                            <a href="{{ url('/') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Welcome</a>
+                        <a href="{{ url('/') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Welcome</a>
 
                      
                         @auth

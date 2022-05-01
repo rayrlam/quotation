@@ -1,8 +1,8 @@
 <?php
-namespace App\Http\Controllers\Api\V4;
+namespace App\Http\Controllers\Api\V1;
 
-use App\Http\Controllers\Api\V4\RatingInterface;
-use App\Http\Controllers\Api\V4\RatingFactorHandler;
+use App\Http\Controllers\Api\V1\RatingInterface;
+use App\Http\Controllers\Api\V1\RatingFactorHandler;
 use App\Helpers\QuoteHelper;
 
 class Abicode extends RatingFactorHandler implements RatingInterface

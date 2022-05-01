@@ -1,7 +1,7 @@
 <x-site-layout>
     <x-slot name="header">
         <div class="flex justify-center sm:justify-start sm:pt-0">
-            <h1 class="">
+            <h1 class="ml-4">
                 {{ __('Technical Test - Development Task') }}    
             </h1>
         </div>
@@ -61,57 +61,40 @@
  
         <div class="ml-4 text-xl mt-4 font-semibold text-gray-900 dark:text-white">
             <ul>
-                <li>Laravel Installation - <a href="https://laravel.com/docs/9.x/installation" target="_blank">https://laravel.com/docs/9.x/installation</a></li>
+                <li>Laravel Installation - <a class="text-gray-700" href="https://laravel.com/docs/9.x/installation" target="_blank">https://laravel.com/docs/9.x/installation</a></li>
                 <li>Create Database quotation</li>
                 <li>Edit .env at DB_DATABASE, DB_USERNAME & DB_PASSWORD for database connection</li>
                 <li>Run Laravel Command
-                    <ul>
-                        <li>
-                            php artisan migrate
-                            <ul>
-                                <li>Create all tables for this app</li>
-                            </ul>
-                        </li>
-                        <li class="mt-4">
-                            php artisan db:seed
-                            <ul>
-                                <li>Create the dumpy data for this app</li>
-                            </ul>    
-                        </li>
-                        <li class="mt-4">
-                            php artisan test
-                            <ul>
-                                <li>Run the QuoteTest to check for errors</li>
-                            </ul>
-                        </li>
-                    </ul>
+                    <div style="margin-top:20px; background-color:#091e42; color:#fefefe; width:90%; padding: 10px 20px">
+<pre>
+/*
+** Create all tables for this app
+*/ 
+php artisan migrate</pre>        
+                    </div>
+                    <div style="margin-top:20px; background-color:#091e42; color:#fefefe; width:90%; padding: 10px 20px">
+<pre>
+/*
+** Create the dumpy data for this app
+*/    
+php artisan db:seed</pre>        
+                    </div>
+                    <div style="margin-top:20px; background-color:#091e42; color:#fefefe; width:90%; padding: 10px 20px">
+<pre>
+/*
+** Run the QuoteTest to check for errors
+*/    
+php artisan test</pre>        
+                    </div>
                 </li>
-                <li>
+                <li style="margin-top:20px">
                     Main File
                     <ul>
                         <li>
-                            Folder:
-                            <ul>
-                                <li>App\Http\Controllers\Api\V1</li>
-                                <li>App\Http\Controllers\Api\V2</li>
-                                <li>App\Http\Controllers\Api\V3</li>
-                                <li>App\Http\Controllers\Api\V4</li>
-                            </ul>
-                        </li>
-                        <li>
-                            Controller: 
-                            <ul>
-                                <li>App\Http\Controllers\Api\V1\QuoteV1Controller</li>
-                                <li>App\Http\Controllers\Api\V2\QuoteV2Controller</li>
-                                <li>App\Http\Controllers\Api\V3\QuoteV3Controller</li>
-                                <li>App\Http\Controllers\Api\V4\QuoteV4Controller</li>
-                            </ul>
+                            Controller: App\Http\Controllers\Api\V1\QuoteV1Controller
                         </li>
                         <li>
                             Helpers: App\Helpers\QuoteHelper
-                        </li>
-                        <li>
-                            Services: QuoteInterface, AgeRf, AbicodeRf, PostcodeRf
                         </li>
                         <li>
                             Tests: Tests\Unit\QuoteTest
@@ -119,13 +102,7 @@
                     </ul>
                 </li>
                 <li>
-                    Api Route:
-                    <ul>
-                        <li>'/api/v1/quoting'</li>
-                        <li>'/api/v2/quoting'</li>
-                        <li>'/api/v3/quoting'</li>
-                        <li>'/api/v4/quoting'</li>
-                    </ul> 
+                    Api Route: '/api/v1/quoting'
                 </li>
             </ul>  
         </div>

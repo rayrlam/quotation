@@ -1,5 +1,5 @@
 <?php 
-namespace App\Http\Controllers\Api\V4;
+namespace App\Http\Controllers\Api\V1;
 
 interface RatingInterface
 {

@@ -1,7 +1,11 @@
 <?php
-namespace App\Http\Controllers\Api\V4;
+namespace App\Http\Controllers\Api\V1;
 
 use Illuminate\Support\Facades\DB;
+use App\Http\Controllers\Api\V1\Age;
+use App\Http\Controllers\Api\V1\Abicode;
+use App\Http\Controllers\Api\V1\Postcode;
+use App\Http\Controllers\Api\V1\Premium;
 
 class RatingFactorHandler
 {
@@ -27,5 +31,14 @@ class RatingFactorHandler
         {
             return 1.0;
         }
+    }
+
+    public function rf($request)
+    {
+        $item = new Abicode($request->regNo);
+        $item = new Postcode($item, $request->postcode);
+        $item = new Age($item, $request->age);
+        $item = new Premium($item);
+        return  $item->cost();
     }
 }

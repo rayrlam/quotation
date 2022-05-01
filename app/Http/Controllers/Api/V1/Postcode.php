@@ -1,8 +1,8 @@
 <?php
-namespace App\Http\Controllers\Api\V4;
+namespace App\Http\Controllers\Api\V1;
 
-use App\Http\Controllers\Api\V4\RatingInterface;
-use App\Http\Controllers\Api\V4\RatingFactorHandler;
+use App\Http\Controllers\Api\V1\RatingInterface;
+use App\Http\Controllers\Api\V1\RatingFactorHandler;
 
 class Postcode extends RatingFactorHandler implements RatingInterface
 {
