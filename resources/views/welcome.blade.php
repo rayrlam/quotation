@@ -90,21 +90,42 @@
                     Main File
                     <ul>
                         <li>
-                            Controller: App\Http\Controllers\Api\V1\QuoteV1Controller, App\Http\Controllers\Api\V2\QuoteV2Controller
+                            Folder:
+                            <ul>
+                                <li>App\Http\Controllers\Api\V1</li>
+                                <li>App\Http\Controllers\Api\V2</li>
+                                <li>App\Http\Controllers\Api\V3</li>
+                                <li>App\Http\Controllers\Api\V4</li>
+                            </ul>
+                        </li>
+                        <li>
+                            Controller: 
+                            <ul>
+                                <li>App\Http\Controllers\Api\V1\QuoteV1Controller</li>
+                                <li>App\Http\Controllers\Api\V2\QuoteV2Controller</li>
+                                <li>App\Http\Controllers\Api\V3\QuoteV3Controller</li>
+                                <li>App\Http\Controllers\Api\V4\QuoteV4Controller</li>
+                            </ul>
                         </li>
                         <li>
                             Helpers: App\Helpers\QuoteHelper
                         </li>
                         <li>
-                            Tests: Tests\Unit\QuoteTest
+                            Services: QuoteInterface, AgeRf, AbicodeRf, PostcodeRf
                         </li>
                         <li>
-                            Services: QuoteInterface, AgeRf, AbicodeRf, PostcodeRf
+                            Tests: Tests\Unit\QuoteTest
                         </li>
                     </ul>
                 </li>
                 <li>
-                    Api Route: '/api/v1/quoting', '/api/v1/quoting'
+                    Api Route:
+                    <ul>
+                        <li>'/api/v1/quoting'</li>
+                        <li>'/api/v2/quoting'</li>
+                        <li>'/api/v3/quoting'</li>
+                        <li>'/api/v4/quoting'</li>
+                    </ul> 
                 </li>
             </ul>  
         </div>
