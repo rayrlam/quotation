@@ -1,14 +1,14 @@
 <?php
 namespace App\Http\Controllers\Api\V1;
 
-use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\Http\Controllers\Api\V1\RatingFactorHandler;
+use Illuminate\Http\Response;
+use App\Http\Controllers\Api\V1\Calculator;
 
-class QuoteV1Controller extends Controller
+class QuoteV1Controller extends Calculator
 {
-    public function quoting(Request $request)
+    public function quoting(Request $request) 
     {  
-        return ["data" => ["result" => RatingFactorHandler::rf($request)]];
+        return response()->json(["data" => ["result" => parent::cal($request)]]);
     }
 }
