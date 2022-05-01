@@ -94,6 +94,19 @@ php artisan test</pre>
                             Controller: App\Http\Controllers\Api\V1\QuoteV1Controller
                         </li>
                         <li>
+                            Interface: App\Http\Controllers\Api\V1\RatingInterface
+                        </li>
+                        <li>
+                            Classes: 
+                            <ul>
+                                <li>App\Http\Controllers\Api\V1\Abicode</li>
+                                <li>App\Http\Controllers\Api\V1\Age</li>
+                                <li>App\Http\Controllers\Api\V1\Postcode</li>
+                                <li>App\Http\Controllers\Api\V1\Premium</li>
+                                <li>App\Http\Controllers\Api\V1\RatingFactorHandler</li>
+                            </ul>
+                        </li>
+                        <li>
                             Helpers: App\Helpers\QuoteHelper
                         </li>
                         <li>
