@@ -11,11 +11,14 @@ class Calculator extends Controller
 {
     public function cal($request): float
     {
-        $item = new Abicode($request->regNo);
-        $item = new Postcode($item, $request->postcode);
-        $item = new Age($item, $request->age);
-        $item = new Premium($item);
-        
-        return  $item->cost();
+        return (new Premium(
+                    new Age(
+                        new Postcode(
+                            new Abicode($request->regNo), 
+                            $request->postcode
+                        ),
+                        $request->age
+                    )
+                ))->cost();
     }
 }
