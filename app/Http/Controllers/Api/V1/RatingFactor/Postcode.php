@@ -15,7 +15,7 @@ class Postcode extends QuoteRepository implements RatingFactorInterface
         $this->rf = $rf;
     }
 
-    public function cost() :float
+    public function cost(): float
     {
         return $this->rf->cost() * QuoteRepository::get('postcode', explode(" ", $this->postcode)[0]);
     }

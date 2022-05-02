@@ -14,7 +14,7 @@ class Premium extends QuoteRepository implements RatingFactorInterface
         $this->rf = $rf;
     }
 
-    public function cost() :float
+    public function cost(): float
     {
         return round($this->rf->cost() * self::BASE_PREMIUM, 2); 
     }

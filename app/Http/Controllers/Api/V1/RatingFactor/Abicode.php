@@ -14,7 +14,7 @@ class Abicode extends QuoteRepository implements RatingFactorInterface
         $this->regNo = $regNo;
     }
 
-    public function cost() :float 
+    public function cost(): float 
     {
         return QuoteRepository::get('regno', QuoteHelper::getFakeAbicode($this->regNo));
     }

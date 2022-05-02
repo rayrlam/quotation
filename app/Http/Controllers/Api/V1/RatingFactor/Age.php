@@ -15,7 +15,7 @@ class Age extends QuoteRepository implements RatingFactorInterface
         $this->age = $age;
     }
 
-    public function cost() :float
+    public function cost(): float
     {
         return $this->rf->cost() * QuoteRepository::get('age', (int) $this->age);
     }
