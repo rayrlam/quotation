@@ -39,7 +39,7 @@ class QuoteHelper
         ["id"=>6,"abi_code"=>"52123803","rating_factor"=>1.2]
     ];
 
-    // static private $fake_api_link = 'https://fakeapi.com/api/v1/regno/';
+    // static public $fake_api_link = 'https://fakeapi.com/api/v1/regno/';
 
     static public function getQuote($request)
     {
