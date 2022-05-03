@@ -25,9 +25,7 @@ class QuoteRepository
         {
             return (float) $data[0]->rating_factor;
         }
-        else
-        {
-            return 1.0;
-        }
+      
+        return 1.0;
     }
 }
