@@ -62,8 +62,8 @@
         <div class="text-lg mt-4   text-gray-900 dark:text-white">
             <ul class="break-all">
                 <li class="ml-4">Laravel Installation - <a class="text-gray-700" href="https://laravel.com/docs/9.x/installation" target="_blank">https://laravel.com/docs/9.x/installation</a></li>
-                <li class="ml-4">Create Database quotation</li>
-                <li class="ml-4">Edit .env at DB_DATABASE, DB_USERNAME & DB_PASSWORD for database connection</li>
+                <li class="ml-4">Create Database // Database name should match the name of DB_DATABASE of the file .env.example</li>
+                <li class="ml-4">Rename .env.example to .env</li>    
                 <li class="ml-4">Run Laravel Command
                     <div class="mt-4 bg-blue-600 text-gray-200 p-6 rounded-lg">
                         <div class="text-gray-400">
