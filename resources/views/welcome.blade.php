@@ -10,6 +10,7 @@
             </p>
          
 <pre class="bg-blue-800 text-gray-100 p-4 rounded-lg">
+    
 {
     "age": 20,
     "postcode": "PE3 8AF",
