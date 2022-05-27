@@ -1,6 +1,6 @@
 <x-site-layout>
-    <div class="p-8 lg:border-2  lg:border-zinc-300">
 
+    <div class="p-8 w-full bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">
         <div class="text-lg lg:mt-4 text-gray-900 dark:text-white">
             <p class="mb-4">
                 If you are reasonably familiar with Symfony, this task should take approximately 3 hours (but don't worry if it takes more or less time than that).
@@ -9,13 +9,15 @@
                 Create a Symfony project (either Symfony 4 or 5) for an API endpoint using DRY and SOLID object-oriented PHP, following PSR-12. The endpoint should accept a JSON payload containing the following fields: age, postcode, regNo. For example, the body of the request might look like this:
             </p>
          
-<pre class="bg-blue-800 text-gray-100 p-4 rounded-lg">
-    
+<pre class="rounded-lg"><code class="language-js">    
 {
     "age": 20,
     "postcode": "PE3 8AF",
     "regNo": "PJ63 LXR"
-}</pre>        
+}</code></pre> 
+
+
+
         
         </div>
 
@@ -59,54 +61,62 @@
                 <li class="ml-4">
                     Create Database laravel
                 </li>
-                <li>
-                    <div class="mt-4 bg-blue-800 text-gray-100 p-6 rounded-lg">
-                        <div class="text-gray-400 mb-2">
-                            /*<br>
-                            ** Create by MySQL Comman<br>
-                            */
-                        </div>
-                        CREATE DATABASE LARAVEL;        
-                    </div>    
-                </li>
-                <li class="ml-4 mt-4">Run Laravel Command</li>
-                <li>
-                    <div class="mt-4 bg-blue-800 text-gray-100 p-6 rounded-lg">
-                        <div class="text-gray-400 mt-4 mb-2">
-                            /*<br>
-                            ** Create all tables for this app<br>
-                            */
-                        </div>
-                        php artisan migrate        
-                 
+<li>                    
+<pre class="rounded-lg"><code class="language-sql">    
+/*
+** Create by MySQL Command
+*/
+ 
+CREATE DATABASE LARAVEL;        
+</code></pre>   
+</li>
 
-                        <div class="text-gray-400 mt-4 mb-2">
-                            /*<br>
-                            ** Create the dumpy data for this app<br>
-                            */
-                        </div>
-                        php artisan db:seed --class=DataSeeder        
-              
-                        <div class="text-gray-400 mt-4 mb-2">
-                            /*<br>
-                            ** Run test to check for errors<br>
-                            */
-                        </div>
-                        php artisan test        
-             
-                        <div class="text-gray-400 mt-4 mb-2">
-                            /*<br>
-                            ** Running local server<br>
-                            */
-                        </div>
-                        php artisan serve        
-                    </div>
-                </li>
+<li class="ml-4 mt-4">Run Laravel Command</li>
+
+<li class="mb-4">
+<pre class="rounded-lg"><code class="language-php">    
+/*
+** Create all tables for this app
+*/
+ 
+php artisan migrate         
+</code></pre> 
+</li>
+
+<li class="mb-4">
+<pre class="rounded-lg"><code class="language-php">    
+/*
+**  Create the dumpy data for this app
+*/
+ 
+php artisan db:seed --class=DataSeeder           
+</code></pre> 
+</li>
+
+<li class="mb-4">
+<pre class="rounded-lg"><code class="language-php">    
+/*
+**  Run test to check for errors
+*/
+ 
+php artisan test           
+</code></pre> 
+</li>
+
+<li class="mb-4">
+<pre class="rounded-lg"><code class="language-php">    
+/*
+**  Running local server
+*/
+ 
+php artisan serve             
+</code></pre> 
+</li>
+
+ 
             </ul>
         </div>
-
-       
-        
+ 
         <hr class="hr mt-8 mb-4" />
             
         <h2 class="text-xl font-bold">

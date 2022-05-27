@@ -17,6 +17,13 @@
 
         <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700" rel="stylesheet">
 
+        <link rel="stylesheet" href="https://unpkg.com/flowbite@1.4.7/dist/flowbite.min.css" />
+
+        <link rel="stylesheet" href="{{ asset('css/prism.css')}}" />
+   
+        <script src="{{ asset('js/prism.js')}}"></script>
+       
+        <script src="https://unpkg.com/flowbite@1.4.7/dist/flowbite.js"></script>
         <style>		
             hr.hr {
                 border-top: 2px solid green;
@@ -31,7 +38,6 @@
             <!--Main-->
             <div class="container pt-8 mx-auto flex flex-wrap flex-col md:flex-row items-center">
                 
-                <!--Left Col-->
                 <div class="flex flex-col px-2 w-full justify-center lg:items-start">
                     <h1 class="text-3xl md:text-5xl text-purple-800 font-bold leading-tight text-center md:text-left">
                         <div class="flex justify-center sm:justify-start sm:pt-0">
