@@ -53,14 +53,12 @@ class QuoteTest extends TestCase
             {
                 $sum *= $a[$i]['rating_factor'];
             }
-                
-            $sum = round($sum,2);
 
             $this->postJson('api/v1/quoting', $payload)
             ->assertStatus(200)
             ->assertExactJson([
                 "data" => [
-                    "result" => $sum
+                    "result" => round($sum,2)
                 ]
             ]);
             
