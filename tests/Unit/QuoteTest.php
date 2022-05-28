@@ -6,7 +6,10 @@ use App\Helpers\QuoteHelper;
 
 class QuoteTest extends TestCase
 {
+<<<<<<< HEAD
 
+=======
+>>>>>>> 446963737eaa1873902574cd7e637b752ecec238
     public function test_rating_factor_equal_627()
     {
         $payload = [
@@ -17,7 +20,11 @@ class QuoteTest extends TestCase
 
         $this->postJson('api/v1/quoting', $payload)
              ->assertStatus(200)
+<<<<<<< HEAD
              ->assertJson([
+=======
+             ->assertExactJson([
+>>>>>>> 446963737eaa1873902574cd7e637b752ecec238
                 "data" => [
                     "result" => 627.00
                 ]
@@ -59,7 +66,11 @@ class QuoteTest extends TestCase
 
             $this->postJson('api/v1/quoting', $payload)
             ->assertStatus(200)
+<<<<<<< HEAD
             ->assertJson([
+=======
+            ->assertExactJson([
+>>>>>>> 446963737eaa1873902574cd7e637b752ecec238
                 "data" => [
                     "result" => $sum
                 ]
