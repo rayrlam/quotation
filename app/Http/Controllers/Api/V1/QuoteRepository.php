@@ -8,7 +8,7 @@ class QuoteRepository
     private $tables = [
         'age'=>['tname'=>'ages','fname'=>'age'], 
         'postcode'=>['tname'=>'postcodes','fname'=>'postcode_area'],
-        'regno'=>['tname'=>'abicodes','fname'=>'abi_code'] 
+        'regNo'=>['tname'=>'abicodes','fname'=>'abi_code'] 
     ];
 
     public function get($name, $value): float

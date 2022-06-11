@@ -7,16 +7,16 @@ use App\Http\Controllers\Api\V1\QuoteRepository;
 class Age extends QuoteRepository implements RatingFactorInterface
 {
     private $rf;
-    private $age;
+    public $req;
  
-    public function __construct (RatingFactorInterface $rf, string $age)
+    public function __construct (?RatingFactorInterface $rf = null)
     {
         $this->rf = $rf;
-        $this->age = $age;
+        $this->req = $rf->req;
     }
 
     public function cost(): float
     {
-        return $this->rf->cost() * QuoteRepository::get('age', (int) $this->age);
+        return round($this->rf->cost() * QuoteRepository::get('age', (int) $this->req->age),2);
     }
 }

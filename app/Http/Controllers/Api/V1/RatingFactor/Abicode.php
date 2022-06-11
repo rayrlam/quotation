@@ -7,15 +7,17 @@ use App\Helpers\QuoteHelper;
 
 class Abicode extends QuoteRepository implements RatingFactorInterface
 {
-    private $regNo;
- 
-    public function __construct (string $regNo)
+    private $rf;
+    public $req;
+
+    public function __construct(?RatingFactorInterface $rf = null)
     {
-        $this->regNo = $regNo;
+        $this->rf = $rf;
+        $this->req = $rf->req;
     }
 
     public function cost(): float 
     {
-        return QuoteRepository::get('regno', QuoteHelper::getFakeAbicode($this->regNo));
+        return $this->rf->cost() * QuoteRepository::get('regNo', QuoteHelper::getFakeAbicode($this->req->regNo));
     }
 }
